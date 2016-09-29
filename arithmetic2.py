@@ -29,3 +29,10 @@ def power(args):
 
 def mod(args):
     return args[0] % args[1]
+
+def my_reduce(func, somelist):
+    total = func(somelist[0], somelist[1])
+
+    for num in somelist[2:]:
+        total = func(total, num)
+    return total
