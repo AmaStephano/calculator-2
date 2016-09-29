@@ -2,28 +2,16 @@ def add(args):
     return sum(args)
 
 def subtract(args):
-    total = args[0]
-    for num in args[1:]:
-        total -= num
-    return total
-
+    return reduce(lambda x,y: x-y, args)
 
 def multiply(args):
-    total = args[0]
-    for num in args[1:]:
-        total *= num
-    return total
-
+    return reduce(lambda x,y: x*y, args)
 
 def divide(args):
     # Need to turn at least argument to float for division to
     # not be integer division
     floats = map(float, args)
-    total = floats[0]
-    for num in floats[1:]:
-        total /= num
-    return total
-
+    return reduce(lambda x,y: x/y, floats)
 
 def square(args):
     # Needs only one argument
