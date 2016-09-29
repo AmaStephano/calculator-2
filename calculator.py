@@ -8,6 +8,7 @@ calculator program yourself in this file.
 from arithmetic2 import *
 
 raw_file = open("calcinput.txt")
+output = open("output.txt", "a")
 
 # Your code goes here
 #loop forever
@@ -32,28 +33,28 @@ for line in raw_file:
     #if "q". quit out of program
     
     if tokens[0] == "+":
-        print ("%.2f" % add(args))
+        output.write("%.2f\n" % add(args))
 
     elif tokens[0] == "-":
-        print ("%.2f" % subtract(args))
+        output.write("%.2f\n" % subtract(args))
 
     elif tokens[0] == "*":
-        print ("%.2f" % multiply(args))
+        output.write("%.2f\n" % multiply(args))
 
     elif tokens[0] == "/":
-        print ("%.2f" % divide(args))
+        output.write("%.2f\n" % divide(args))
 
     elif tokens[0] == "square":
-        print ("%.2f" % square(args))
+        output.write("%.2f\n" % square(args))
 
     elif tokens[0] == "cube":
-        print ("%.2f" % cube(args))
+        output.write("%.2f\n" % cube(args))
         
     elif tokens[0] == "pow":
-        print ("%.2f" % power(args))
+        output.write("%.2f\n" % power(args))
 
     elif tokens[0] == "mod":
-        print ("%.2f" % mod(args))
+        output.write("%.2f\n" % mod(args))
     
     else:
         print "You entered an invalid command"
