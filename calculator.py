@@ -5,7 +5,7 @@ Using our arithmetic.py file from Exercise02, create the
 calculator program yourself in this file.
 """
 
-from arithmetic import *
+from arithmetic2 import *
 
 # Your code goes here
 #loop forever
@@ -25,25 +25,25 @@ while True:
         break
     
     elif tokens[0] == "+":
-        print add(args[0], args[1])
+        print add(args)
 
     elif tokens[0] == "-":
-        print subtract(args[0], args[1])
+        print subtract(args)
 
     elif tokens[0] == "*":
-        print multiply(args[0], args[1])
+        print multiply(args)
 
     elif tokens[0] == "/":
-        print divide(args[0], args[1])
+        print divide(args)
 
     elif tokens[0] == "square":
-        print square(args[0])
+        print square(args)
 
     elif tokens[0] == "cube":
-        print cube(args[0])
+        print cube(args)
         
     elif tokens[0] == "pow":
-        print power(args[0], args[1])
+        print power(args)
 
     elif tokens[0] == "mod":
-        print mod(args[0], args[1])
+        print mod(args)
