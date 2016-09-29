@@ -2,6 +2,8 @@ def add(args):
     return sum(args)
 
 def subtract(args):
+    # use anonymous (lamdba) function and pass in list of args to be
+    # able to run on infinite amount of args
     return reduce(lambda x,y: x-y, args)
 
 def multiply(args):
@@ -17,15 +19,13 @@ def square(args):
     # Needs only one argument
     return args[0] * args[0]
 
-
 def cube(args):
     # Needs only one argument
     return args[0] * args[0] * args[0]
 
 def power(args):
-
-    return args[0] ** args[1]  # ** = exponent operator
-
+    # ** = exponent operator
+    return args[0] ** args[1]  
 
 def mod(args):
     return args[0] % args[1]
