@@ -7,14 +7,16 @@ calculator program yourself in this file.
 
 from arithmetic2 import *
 
+raw_file = open("calcinput.txt")
+
 # Your code goes here
 #loop forever
-while True:
-    # get input
-    user_input = raw_input("> ") 
 
-    # split input into list
-    tokens = user_input.split(" ")
+    # get input
+
+for line in raw_file:
+
+    tokens = line.strip().split(" ")
     if tokens[0] != "q" and len(tokens) < 2:
         print "You didn't enter enough arguments."
         continue 
@@ -28,10 +30,8 @@ while True:
         continue
 
     #if "q". quit out of program
-    if tokens[0] == "q":
-        break
     
-    elif tokens[0] == "+":
+    if tokens[0] == "+":
         print ("%.2f" % add(args))
 
     elif tokens[0] == "-":
@@ -59,3 +59,4 @@ while True:
         print "You entered an invalid command"
       
 
+raw_file.close()
