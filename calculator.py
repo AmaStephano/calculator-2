@@ -32,28 +32,28 @@ while True:
         break
     
     elif tokens[0] == "+":
-        print add(args)
+        print ("%.2f" % add(args))
 
     elif tokens[0] == "-":
-        print subtract(args)
+        print ("%.2f" % subtract(args))
 
     elif tokens[0] == "*":
-        print multiply(args)
+        print ("%.2f" % multiply(args))
 
     elif tokens[0] == "/":
-        print divide(args)
+        print ("%.2f" % divide(args))
 
     elif tokens[0] == "square":
-        print square(args)
+        print ("%.2f" % square(args))
 
     elif tokens[0] == "cube":
-        print cube(args)
+        print ("%.2f" % cube(args))
         
     elif tokens[0] == "pow":
-        print power(args)
+        print ("%.2f" % power(args))
 
     elif tokens[0] == "mod":
-        print mod(args)
+        print ("%.2f" % mod(args))
     
     else:
         print "You entered an invalid command"
