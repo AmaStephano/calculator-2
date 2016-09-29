@@ -18,7 +18,11 @@ while True:
 
     # use map function to turn items 1 and beyond in a list into ints
     # perform int function on all items in tokens from index 1 on
-    args = map(int, tokens[1:])
+    try:
+        args = map(int, tokens[1:])
+    except ValueError:
+        print "You entered an invalid input"
+        continue
 
     #if "q". quit out of program
     if tokens[0] == "q":
@@ -47,3 +51,8 @@ while True:
 
     elif tokens[0] == "mod":
         print mod(args)
+    
+    else:
+        print "You entered an invalid command"
+      
+
