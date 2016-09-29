@@ -14,7 +14,10 @@ while True:
     user_input = raw_input("> ") 
 
     # split input into list
-    tokens = user_input.split(" ") 
+    tokens = user_input.split(" ")
+    if tokens[0] != "q" and len(tokens) < 2:
+        print "You didn't enter enough arguments."
+        continue 
 
     # use map function to turn items 1 and beyond in a list into ints
     # perform int function on all items in tokens from index 1 on
